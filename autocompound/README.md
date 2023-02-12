@@ -1,4 +1,7 @@
 # coreum AUTO COMPOUND
+```console
+screen -Rd cored
+```
 
 ```console
 cd $HOME
