@@ -8,10 +8,10 @@ apt-get install bc
 ```
 
 ```console
-wget https://raw.githubusercontent.com/planq-network/autocompound/main/autocompound.sh
+wget https://raw.githubusercontent.com/caraka15/coreum/main/autocompound/autocompound.sh
 ```
 ```console
-chmod +x autocompound2.sh
+chmod +x autocompound.sh
 ```
 
 
