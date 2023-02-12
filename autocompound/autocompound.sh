@@ -52,9 +52,9 @@ if [ "$ANSWER" == "yes" ]; then
     echo "-------------------------------------------------------------------"
     echo -e "$RED$(date +%F-%H-%M-%S)$NORMAL $YELLOW Withdraw commission and rewards $NORMAL"
     echo "-------------------------------------------------------------------"
-    echo $PASS |  cored tx distribution withdraw-rewards ${VALOPER} --commission --gas="1000000" --gas-adjustment="1.15" --gas-prices="30000000000${COIN}" --chain-id=${CHAIN} --from ${KEY_NAME} --node ${RPC_ADDRESS} -y | grep "raw_log\|txhash"
+    echo $PASS |  cored tx distribution withdraw-rewards ${VALOPER} --commission --fees=20000utestcore --chain-id=${CHAIN} --from ${KEY_NAME} --node ${RPC_ADDRESS} -y | grep "raw_log\|txhash"
     sleep 20s
-    echo $PASS |  cored tx distribution withdraw-all-rewards --gas="1000000" --gas-adjustment="1.15" --gas-prices="30000000000${COIN}" --chain-id=${CHAIN} --from ${KEY_NAME} --node ${RPC_ADDRESS} -y | grep "raw_log\|txhash"
+    echo $PASS |  cored tx distribution withdraw-all-rewards --fees=20000utestcore --chain-id=${CHAIN} --from ${KEY_NAME} --node ${RPC_ADDRESS} -y | grep "raw_log\|txhash"
     sleep 20s
 
     AMOUNT=$( cored query bank balances ${ADDRESS} --chain-id=${CHAIN} --node ${RPC_ADDRESS} --output json | jq -r '.balances[] | select(.denom=="'${COIN}'") | .amount')
