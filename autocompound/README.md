@@ -29,3 +29,6 @@ manual set time
 ```
 `` time can be in s (seconds), m (minutes) or h (hours) for example: -s 60s or -s 60m or -s 24h
 ``
+
+
+edited from planq-network https://raw.githubusercontent.com/planq-network/autocompound/main/autocompound2.sh
