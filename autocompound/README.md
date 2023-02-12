@@ -31,4 +31,5 @@ manual set time
 ``
 
 
+`copyright`
 edited from planq-network https://raw.githubusercontent.com/planq-network/autocompound/main/autocompound2.sh
